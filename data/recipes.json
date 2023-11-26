@@ -1,0 +1,94 @@
+{
+    "recipes":[
+        {
+            "id": "1",
+            "title": "Tortilla Pizza",
+            "rating": "3",
+            "occasion": "breakfast",
+            "prepTime": "5 mins",
+            "cookTime": "15 mins",
+            "totalTime": "20 mins",
+            "servings": "1",
+            "ingredients": ["1/2 tablespoon butter, 1 tortilla", "3 large eggs", "1/4 teaspoon salt",
+                            "1/4 teaspoon freshly ground black pepper", "1/2 cup total assorted toppings, such as cheese, hot sauce, cooked meat or veggies" ],
+            "nutrition": {
+                "calories": 1928,
+                "fat": {
+                    "value": 70,
+                    "unit": "g"
+                },
+                "carbs": {
+                    "value": 248,
+                    "unit": "g"
+                },
+                "protein": {
+                    "value": 70,
+                    "unit": "g"
+                }
+            },
+            "steps": [
+                "Preheat the oven to 350 degrees F (175 degrees C).",
+                "Rub butter along the bottom and sides of an 8 or 9 inch cake pan. Press tortilla down into the buttered pan and against the sides. Crack each egg next to each other on the tortilla. Sprinkle with salt and pepper and add desired toppings evenly on top.",
+                "Bake in the preheated oven until egg whites are set and tortilla has become lightly browned and toasted along the edges and bottom, 13 to 15 minutes."
+              ],
+            "image": "../images/recipe1.webp",
+            "imageCredits": "DOTDASH MEREDITH VIDEO STUDIOS",
+            "recipeFrom": "https://www.allrecipes.com/"
+        },
+        {
+            "id": "2",
+            "title": "Pasta Salad",
+            "rating": "3.6",
+            "occasion": "lunch",
+            "prepTime": "30 mins",
+            "cookTime": "15mins",
+            "totalTime": "45 mins",
+            "servings": "8",
+            "ingredients": [
+                "1 (8 ounce) package uncooked tri-color rotini pasta",
+                "6 ounces pepperoni sausage, diced",
+                "6 ounces provolone cheese, cubed",
+                "1 medium red onion, very thinly sliced and cut into 1-inch pieces",
+                "1 small cucumber, thinly sliced",
+                "3/4 cup chopped green bell pepper",
+                "3/4 cup chopped red bell pepper",
+                "1 (6 ounce) can pitted black olives, drained",
+                "1/4 cup minced fresh parsley",
+                "1/4 cup grated Parmesan cheese",
+                "1/2 cup olive oil",
+                "1/4 cup red wine vinegar",
+                "2 cloves garlic, minced",
+                "1 teaspoon dried basil",
+                "1 teaspoon dried oregano",
+                "1/2 teaspoon ground mustard seed",
+                "1/4 teaspoon salt",
+                "1/8 teaspoon ground black pepper"
+            ],
+            "nutrition": {
+                "calories": 443,
+                "fat": {
+                    "value": 32,
+                    "unit": "g"
+                },
+                "carbs": {
+                    "value": 25,
+                    "unit": "g"
+                },
+                "protein": {
+                    "value": 16,
+                    "unit": "g"
+                }
+            },
+            "steps": [
+                "Gather all ingredients.",
+                "Bring a large pot of lightly salted water to a boil. Add rotini and cook until tender yet firm to the bite, 8 to 10 minutes. Drain, rinse with cold water, and drain again.",
+                "Transfer drained, cooked pasta to a large bowl. Add pepperoni, provolone cheese, red onion, cucumber, bell peppers, olives, parsley, and Parmesan cheese.",
+                "Mix olive oil, vinegar, garlic, basil, oregano, ground mustard, salt, and pepper for dressing in a jar with a lid. Seal the jar, and shake until well combined.",
+                "Pour dressing over the pasta salad; toss until well coated. Serve immediately, or cover and chill in the refrigerator for up to 8 hours before serving."
+            ],
+            "image": "../images/recipe2.webp",
+            "imageCredits": "DOTDASH MEREDITH VIDEO STUDIOS",
+            "recipeFrom": "https://www.allrecipes.com/"
+        }
+    ]
+}

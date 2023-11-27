@@ -3,19 +3,21 @@ body{
     padding: 0;
 }
 * {
-    box-sizing: border-box; // Ensure padding is included in the width
+    box-sizing: border-box; 
   }
 
   .page-container{
     position: relative;
     min-height: 100vh;
   }
+
+  //HEADER STYLES
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: black;
-    height: 4vh;
+    height: 6vh;
     padding: 0 25px;
     color: white;
     width: 100%;
@@ -27,19 +29,19 @@ body{
       font-weight: bold;
   
       img {
-        max-height: 4vh; // Adjust the image size as needed
-        margin-right: 10px; // Space between image and text
+        max-height: 10vh; 
+        margin-right: 10px; 
       }
     }
   
    .hamburger {
-    display: none; // Hidden by default
+    display: none; 
     cursor: pointer;
     background: none;
     border: none;
     color: white;
     font-size: 30px;
-    z-index: 100; // Ensure the hamburger is above the overlay
+    z-index: 100; 
     margin-right: 20px;
 
   }
@@ -63,7 +65,7 @@ body{
     }
 }
 
-
+//HOME PAGE MAIN GRID
 .main-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -104,29 +106,29 @@ body{
             }
         
         &:hover  {
-            opacity: 0.7; // Visible on hover
+            opacity: 0.7; 
         }
     }
 }
 
 
 
+//LIST OF RECIPES
 .content {
     display: flex;
     justify-content: space-between;
     padding: 50px;
-    box-sizing: border-box; // Ensure padding is included in the width calculation
-    
+    box-sizing: border-box; 
     .recipes-list{
         flex: 1 1 70%;
-        margin-right: 10px; // Add a little space between the two sections
+        margin-right: 10px; 
         width: 60%;
         border-right: 4px solid black;
-
+        margin-bottom: 50px;
         .recipe-container {
             display: flex;
-            align-items: center; // Align items vertically
-            // border-top: 2px solid black;
+            align-items: center; 
+            
 
             .recipe-image {
                 width: 40%; 
@@ -135,7 +137,7 @@ body{
                 img {
                     width: 100%;
                     height: auto;
-                    object-fit: scale-down; // Ensure the image covers the area
+                    object-fit: scale-down; 
                 }
             }
 
@@ -159,24 +161,24 @@ body{
                 }
             
                 li {
-                    position: relative; // This will allow absolute positioning inside
-                    margin-bottom: 20px; // Space between items
-                    list-style: none; // Remove bullet points
+                    position: relative; 
+                    margin-bottom: 20px; 
+                    list-style: none; 
             
                     img {
-                        width: 100%; // Adjust as needed
+                        width: 100%; 
                         display: block;
                     }
             
                     .recipe-name-overlay {
                         position: absolute;
-                        bottom: 0; // Align at the bottom of the image
+                        bottom: 0; 
                         left: 0;
                         width: 100%;
-                        background-color: rgba(0, 0, 0, 0.5); // Translucent overlay
+                        background-color: rgba(0, 0, 0, 0.5); 
                         color: white;
                         text-align: center;
-                        padding: 5px 0; // Padding at top and bottom
+                        padding: 5px 0; 
                     }
                 }
             }
@@ -184,13 +186,13 @@ body{
         }
     }
 
+    //FAVORITE
     .favorite-recipes {
-        flex: 1 1 20%; // The favorites list will not grow or shrink but will be 20% of the content area
-         // Just an example background color
+        flex: 1 1 20%; 
+         
         box-sizing: border-box;
         width: 25%;
         text-align: center;
-        // border: 2px solid black;
         h2{
             margin-left: 40px;
         }
@@ -202,23 +204,8 @@ body{
             img {
                 width: 100%;
                 height: auto;
-                // ... other styles ...
             }
     
-            // .recipe-name-overlay {
-            //     position: absolute;
-            //     top: 0; // Align at the top of the image
-            //     left: 0;
-            //     width: 100%;
-            //     background-color: rgba(0, 0, 0, 0.5); // Semi-transparent overlay
-            //     color: white;
-            //     text-align: center;
-    
-            //     // Container for title and rating
-            //     div {
-            //         padding: 5px 0; // Padding for each item (title, rating)
-            //     }
-            // }
         }
 
         .text-container{
@@ -251,13 +238,12 @@ body{
 }
 
 
-//RECIPE DETAILS STYLES
-
    
   
   .wrapper {
-    width: 80%; // Set the desired max-width for the wrapper
-    margin: 0 auto; // Center the wrapper in the page
+    width: 80%; 
+    margin: 0 auto; 
+   
   }
   
   .times {
@@ -265,8 +251,8 @@ body{
     grid-template-columns: repeat(2, 1fr);
     border: 1px solid black;
     padding: 20px;
-    width: 100%; // Use 100% of the container's width
-    box-sizing: border-box; // Include padding in the width calculation
+    width: 100%;
+    box-sizing: border-box;
   }
   
   #recipe-times {
@@ -278,16 +264,80 @@ body{
 
   
 
-
-
-
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+  
+      label {
+        margin-bottom: 5px;
+      }
+  
+      input[type="text"],
+      textarea {
+        padding: 10px;
+        border: 1px solid darken(#ccc, 10%);
+        border-radius: 4px;
+  
+        &:focus {
+          outline: none;
+          border-color: darken(#aaa, 10%);
+        }
+      }
+  
+      .rating {
+        display: flex;
+        justify-content: space-between;
+  
+        input {
+          display: none;
+        }
+  
+        label {
+          cursor: pointer;
+          padding: 5px 10px;
+          border: 1px solid darken(#ccc, 10%);
+          border-radius: 4px;
+  
+          &:hover {
+            background-color: lighten(#eee, 10%);
+          }
+        }
+  
+        input:checked + label {
+          background-color: darken(#ddd, 10%);
+        }
+      }
+    }
+  
+    button {
+      padding: 10px 15px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 50px;
+  
+      &:hover {
+        background-color: darken(#333, 10%);
+      }
+    }
+  }
 
 .footer{
 
     background-color: black;
     color: white;
     text-align: center;
-    height: 4vh;
+    height: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -297,9 +347,6 @@ body{
     width: 100%;
 }
 
-
-// General styles
-// ...
 
 // Responsive adjustments for smaller screens
 @media (max-width: 768px) {
@@ -313,26 +360,22 @@ body{
         margin: 0;
     }
 
-    .header{
-        .hamburger{
-            display: block;
-        }
-    }
+    
+   
     
     .nav-menu {
         position: fixed;
         top: 0;
-        right: 0;
-        transform: translateX(100%); // Off the screen
+        right: 100%;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.7); // Semi-transparent background
+        background-color: rgba(0, 0, 0, 0.7); 
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly; // Evenly space out the menu items
+        justify-content: space-evenly; 
         align-items: center;
         transition: transform 0.3s ease-in-out;
-        z-index: 1; // Below the hamburger icon
+        z-index: 1;
     
         ul {
           flex-direction: column;
@@ -346,26 +389,33 @@ body{
               color: white;
               text-decoration: none;
               font-size: 24px;
-              display: block; // Make the links fill the li for easier clicking
-              padding: 10px 0; // Add padding for touch targets
+              display: block;
+              padding: 10px 0;
             }
           }
         }
       }
-      
+      .header{
+        .logo{
+            font-size: 15px;
+        }
+        .hamburger{
+            display: block;
+        }
+    }
     .main-grid {
-        display: block; // Change grid to block to stack the images
-        height: auto; // Adjust height to content
-        padding-top: 0; // Remove padding at the top
+        display: block; 
+        height: auto; 
+        padding-top: 0; 
 
         .image-container {
-            width: 100%; // Full width for each image container
-            height: 22.5vh; // Height adjusts to content
-             // Space between image containers
+            width: 100%; 
+            height: 22.5vh; 
+    
             
             img {
-                width: 100%; // Full width for each image
-                height: 25vh; // Height adjusts to maintain aspect ratio
+                width: 100%; 
+                height: 25vh; 
             }
 
             .image-text {
@@ -373,15 +423,16 @@ body{
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 20%; // Ensure the text fits within the image, adjust as needed
-                opacity: 1; // Text is always visible on smaller screens
+                width: 50%; 
+                opacity: 1; 
                 padding: 20px;
             }
         }
     }
 
     .content {
-        flex-direction: column; // Stack content vertically
+        flex-direction: column; 
+        
 
         .recipes-list,
         .favorite-recipes {
@@ -394,18 +445,18 @@ body{
             
             .recipe-container,
             ul li {
-                flex-direction: column; // Stack elements inside the container   
+                flex-direction: column; 
                 text-align: center;             
                 .recipe-image,
                 .recipe-details {
-                    width: 100%; // Full width for both image and details
-                    margin-bottom: 10px; // Space between elements
+                    width: 100%; 
+                    margin-bottom: 10px;
                 }
 
                 .recipe-name-overlay {
-                    position: relative; // Change from absolute to relative
-                    width: 100%; // Full width
-                    padding: 10px 0; // Padding at top and bottom
+                    position: relative;
+                    width: 100%; 
+                    padding: 10px 0;
                     color: white;
                     background-color: rgba(0, 0, 0, 0.5);
                     text-align: center;
@@ -414,13 +465,13 @@ body{
         }
 
         .favorite-recipes {
-            // Ensure the favorite-recipes take full width
+           
             width: 100%;
             padding: 30px 0 0 0;
             margin: 0 0 40px 0;
             border-top: 2px solid black;
             ul {
-                // Reset any list styles that may affect the layout
+            
                 padding-left: 0;
                 margin-left: 0;
             }
@@ -435,21 +486,21 @@ body{
     }
 
     .wrapper {
-        width: 95%; // Allow a little margin on the sides on small screens
+        width: 95%; 
     }
     
     .main-container .recipe-detail-container,
     .times,
     img.recipe-image {
-        max-width: 100%; // Allow the content to fill the container on small screens
+        max-width: 100%; 
     }
     
     .times {
-        grid-template-columns: 1fr; // Stack the grid items on small screens
+        grid-template-columns: 1fr; 
     }
     
     img.recipe-image {
-        width: 100%; // Full width images on small screens
+        width: 100%; 
     }
     
     #search-container{
@@ -465,6 +516,8 @@ body{
         }
     }
    
-    
+    .comment-form{
+        max-width: 90%;
+    }
 }
 

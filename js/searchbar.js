@@ -14,13 +14,11 @@ function searchRecipes() {
                  recipe.occasion.toLowerCase().includes(searchQuery);
         });
   
-        // Now you can display these search results
-        // For example, clear the current list and append the new results
+
         const resultsContainer = document.getElementById('most-recent-recipes');
         resultsContainer.replaceChildren();
   
         searchResults.forEach(recipe => {
-          // Call a function to display each recipe in the results
           displayRecipe(recipe);
         });
       })
@@ -31,16 +29,11 @@ function searchRecipes() {
   
 
   document.getElementById('search-bar').addEventListener('keyup', function(event) {
-    // Check if the key pressed was 'Enter'
     if (event.key === 'Enter') {
       searchRecipes();
     }
   });
 
-  document.addEventListener('DOMContentLoaded', () => {
-    // Optionally set a default search query or leave the search bar empty to show all recipes
-    document.getElementById('search-bar').value = ''; // Set to a default search term if needed
-    searchRecipes(); // Perform the search
-  });
+
 
   document.getElementById('search-bar').addEventListener('input', searchRecipes);

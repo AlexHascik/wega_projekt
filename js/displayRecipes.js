@@ -2,28 +2,24 @@
 function displayRecipe(recipe, index) {
      // Create a div for each recipe
      const recipeContainer = document.createElement("div");
-     recipeContainer.classList.add("recipe-container"); // You can style this class as needed
+     recipeContainer.classList.add("recipe-container");
  
      recipeContainer.addEventListener('click', function() {
         // Navigate to the recipe details page with the recipe ID as a query parameter
-        window.location.href = `../recipes/recipeDetails.html?id=${recipe.id}`; // Use the actual ID field from your JSON
+        window.location.href = `../recipes/recipeDetails.html?id=${recipe.id}`; 
     });
  
-     // Create a div for the recipe image (on the left)
      const recipeImage = document.createElement("div");
-     recipeImage.classList.add("recipe-image"); // You can style this class as needed
+     recipeImage.classList.add("recipe-image"); 
  
-     // Create an img element for the recipe image
      const imageElement = document.createElement("img");
      imageElement.src = recipe.image;
      imageElement.alt = recipe.title;
  
-     // Append the image element to the recipe image div
      recipeImage.appendChild(imageElement);
  
-     // Create a div for the recipe details (on the right)
      const recipeDetails = document.createElement("div");
-     recipeDetails.classList.add("recipe-details"); // You can style this class as needed
+     recipeDetails.classList.add("recipe-details");
  
      // Add the recipe name to the details
      const recipeName = document.createElement("h2");
@@ -38,22 +34,19 @@ function displayRecipe(recipe, index) {
      totalCookingTime.classList.add("total-cooking-time");
      totalCookingTime.innerHTML = `<i class="fas fa-clock"></i> <b>Total Cooking Time:</b> ${recipe.totalTime}`;
      
-     // Append the recipe name, occasion, and cooking time to the recipe details div
      recipeDetails.appendChild(recipeName);
      recipeDetails.appendChild(recipeOccasion);
      recipeDetails.appendChild(totalCookingTime);
-     // Append the recipe image div and recipe details div to the recipe container
      recipeContainer.appendChild(recipeImage);
      recipeContainer.appendChild(recipeDetails);
      
  
-     // Append the recipe container to the main container (where you want to display the recipes)
-     const mainContainer = document.getElementById("most-recent-recipes"); // Replace with your container selector
+     const mainContainer = document.getElementById("most-recent-recipes"); 
      mainContainer.appendChild(recipeContainer);
   }
 
   function displayTopRatedRecipes(recipes) {
-    const topRated = recipes.sort((a, b) => b.rating - a.rating).slice(0, 2);
+    const topRated = recipes.sort((a, b) => b.rating - a.rating).slice(0, 5);
 
     const favoritesContainer = document.getElementById('favorites');
 
@@ -64,7 +57,7 @@ function displayRecipe(recipe, index) {
         listItem.className = 'favorite-item';
         listItem.addEventListener('click', function() {
             // Navigate to the recipe details page with the recipe ID as a query parameter
-            window.location.href = `../recipes/recipeDetails.html?id=${recipe.id}`; // Use the actual ID field from your JSON
+            window.location.href = `../recipes/recipeDetails.html?id=${recipe.id}`;
         });
         const textContainer = document.createElement('div');
         textContainer.className = 'text-container';
@@ -77,14 +70,12 @@ function displayRecipe(recipe, index) {
         ratingElement.textContent = `Rating: ${recipe.rating}`;
         textContainer.appendChild(ratingElement);
 
-        // Append the text container to the list item
         listItem.appendChild(textContainer);
 
-        // Create and append the image
         const image = document.createElement('img');
         image.src = recipe.image;
         image.alt = recipe.title;
-        image.className = 'favorite-image'; // Add a class for styling
+        image.className = 'favorite-image';
 
         listItem.appendChild(image);
 
@@ -132,17 +123,18 @@ function callOccasionRecipes(occasion) {
       });
   }
   window.addEventListener('DOMContentLoaded', () => {
-
     const params = new URLSearchParams(window.location.search);
+    console.log()
+    const allRecipes = params.get('allRecipes');
     const occasion = params.get('occasion');
   
     if (occasion) {
-        document.querySelector('h2').textContent = `Recipes for ${occasion.charAt(0).toUpperCase() + occasion.slice(1)}`;
-        callOccasionRecipes(occasion);
+      document.querySelector('h2').textContent = `Recipes for ${occasion.charAt(0).toUpperCase() + occasion.slice(1)}`;
+      callOccasionRecipes(occasion);
     } else {
-        loadRecipes();
+      loadRecipes();
     }
-    
   });
+  
 
 

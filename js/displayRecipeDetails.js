@@ -21,12 +21,10 @@ function displayRecipeDetails(recipe) {
 
     
 
-    // Create the recipe name header
     const recipeName = document.createElement('h1');
     recipeName.textContent = recipe.title;
     container.appendChild(recipeName);
 
-    // Create the times section
     const timesDiv = document.createElement('div');
     timesDiv.className = 'times';
     timesDiv.innerHTML = `
@@ -37,7 +35,6 @@ function displayRecipeDetails(recipe) {
     `;
     container.appendChild(timesDiv);
 
-    // Create the ingredients list
     const ingredientsDiv = document.createElement('div');
     ingredientsDiv.className = 'ingredients';
     const ingredientsHeader = document.createElement('h2');
@@ -81,6 +78,5 @@ function displayRecipeDetails(recipe) {
         directionsDiv.appendChild(stepDiv);
     });
     container.appendChild(directionsDiv);
-     imageDiv.appendChild(image)
-    container.appendChild(imageDiv);
+    // container.appendChild(imageDiv);
 }
